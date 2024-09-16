@@ -1,1 +1,15 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#excuse {
+  font-size: 60px;
+}
+
+.position {
+  display: grid;
+  place-items: center;
+  margin-top: 300px;
+}
+
+.header {
+  font-size: 60px;
+}
