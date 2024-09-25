@@ -29,5 +29,5 @@ window.onload = function() {
   }
 
   // Asignación de la excusa al documento HTML a traves del id excuse
-  document.getElementById("excuse").innerHTML = generateExcuse();
+  document.getElementById("excuse").innerHTML = generateExcuse(); //Es más recomendable usar .innerText en este caso, lo que hará será recargar solo el texto que cambia y no la página entera
 };
