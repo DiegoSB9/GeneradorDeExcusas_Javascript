@@ -20,12 +20,13 @@ window.onload = function() {
 
   // Función para generar una excusa aleatoria
   function generateExcuse() {
-    let randomWho = who[Math.floor(Math.random() * who.length)];
-    let randomAction = action[Math.floor(Math.random() * action.length)];
-    let randomWhat = what[Math.floor(Math.random() * what.length)];
-    let randomWhen = when[Math.floor(Math.random() * when.length)];
-
-    return `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}.`;
+    let partsExcuse = [who, action, what, when];
+    let excuse = "";
+    for (let i = 0; i < partsExcuse.length; i++) {
+      let randomIndex = Math.floor(Math.random() * partsExcuse[i].length);
+      excuse += partsExcuse[i][randomIndex] + " ";
+    }
+    return excuse;
   }
 
   // Asignación de la excusa al documento HTML a traves del id excuse
